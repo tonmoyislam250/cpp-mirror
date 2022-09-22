@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <tgbot/tgbot.h>
-#include "dotenv.h"
 using namespace std;
 using namespace TgBot;
-using namespace dotenv;
 
 int main() {
-	env.load_dotenv('config.env');
+	//env.load_dotenv('config.env');
 	
-	Bot bot("TOKEN");
+	Bot bot("2135413408:AAFvc7enJjvSqP8xj8HUY64EA1QM7yY8rBY");
 	
 	bot.getEvents().onCommand("start", [&bot](Message::Ptr message)
 	{

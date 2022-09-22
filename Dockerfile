@@ -8,4 +8,5 @@ RUN git clone https://github.com/reo7sp/tgbot-cpp && cd tgbot-cpp && rm -rf .git
 #   && cmake . && make -j$(nproc) && make install && rm -rf /usr/src/cpp-dotenv
 WORKDIR /usr/src/app
 COPY . .
-RUN cd src && cmake . && make -j$(nproc) && ls -a && ./mirrorbot
+RUN cd src && cmake . && make -j$(nproc) && ls -a && cp mirrorbot /usr/src/app
+CMD ./mirrorbot
